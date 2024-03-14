@@ -5,7 +5,7 @@ from decouple import config
 
 # Creating an instance of the Instaloader class
 bot = instaloader.Instaloader()
-bot.login(user="zshdev", passwd=config('YourInstaPassWord'))
+bot.login(config('InstaUserName'), passwd=config('YourInstaPassWord'))
  
 # Loading a profile from an Instagram handle
 profile = instaloader.Profile.from_username(bot.context, 'zshdev')
